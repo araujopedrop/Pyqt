@@ -13,8 +13,7 @@ class ejemplo_GUI(QMainWindow):
         dotenv_path = join(dirname(__file__), 'EnvFile.env')
         load_dotenv(dotenv_path)
         UI_FILE = os.environ.get("UI")
-         
-        #print(UI_FILE)
+        
         uic.loadUi(UI_FILE,self)
         self.pb_Activar.clicked.connect(self.fn_activar)
         self.pb_Desactivar.clicked.connect(self.fn_desactivar)
